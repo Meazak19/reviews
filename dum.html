@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+body {
+    font-family: sans-serif;
+}
+
+#select {
+    background: #1c1d22;
+    color: #999;
+    width: 80%;
+    padding: 20px 20px 20px 20px;
+    margin: auto;
+    font-size: 14px;
+    position: relative;
+}
+
+#select:before {
+    content: "";
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #818181;
+    position: absolute;
+    right: 20px;
+    top: 42%;
+}
+
+#select-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.menu-items-container {
+    background: dodgerblue;
+    width: 90%;
+    overflow: hidden;
+    max-height: 360px;
+}
+
+.menu-items {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 20px 90px 20px 20px;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.menu-items:hover {
+    background: #333
+}
+
+.menu-items:hover .circle {
+    box-shadow: 0 0 3px 4px rgba(233, 244, 255, 0.3);
+    top: 30%
+}
+
+.circle {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 33%;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circlein {
+    border-radius: 50%;
+    height: 65%;
+    width: 65%;
+    background: skyblue;
+    display: none;
+}
+
+.scrollbar-conatiner {
+    position: absolute;
+    width: 12px;
+    border-radius: 35px;
+    background: rgba(30, 30, 30, 0.3);
+    right: 5%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.scrollbar {
+    height: 30%;
+    width: 100%;
+    border-radius: 35px;
+    background: #333;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: 0;
+
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div id="select">choose...</div>
+<div id="select-menu">
+    <!-- Scrollbar -->
+    <div class="scrollbar-conatiner">
+        <div class="scrollbar"></div>
+    </div>
+    <!-- menu items -->
+    <div class="menu-items-container">
+        <div class="menu-items">
+            <span>Facebook</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>YouTube</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Twitter</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Pinterest</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Instagram</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Raddit</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Facebook</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>YouTube</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Twitter</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Pinterest</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Instagram</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Raddit</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Facebook</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>YouTube</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Twitter</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Pinterest</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Instagram</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+        <div class="menu-items">
+            <span>Raddit</span>
+            <span class="circle">
+                <span class="circlein"></span>
+            </span>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    let select = document.getElementById('select'),
+    selectMenu = document.getElementById("select-menu"),
+    menuItemsContainer = document.getElementsByClassName("menu-items-container")[0],
+    menuItems = document.getElementsByClassName("menu-items"),
+    scrollbarConatiner = document.getElementsByClassName('scrollbar-conatiner')[0]
+
+//show scrollbar only when elements more than 6
+if (menuItems.length > 6) {
+    scrollbarConatiner.style.display = 'block'
+} else {
+    scrollbarConatiner.style.display = 'none'
+}
+
+select.addEventListener('click', function() {
+    //select menu
+    selectMenu.style.display = 'flex'
+
+    //scrollbar
+    scrollbarConatiner.style.height = menuItemsContainer.offsetHeight + "px";
+
+    //select-menu items
+    menuItemsContainer.style.opacity = 1;
+    menuItemsContainer.style.transition = '0.5s';
+});
+
+$(".menu-items").click(function() {
+    //select-menu
+    selectMenu.style.display = 'none'
+
+    //set text of choosed element
+    select.innerText = this.innerText.trim()
+
+    //add circle for choosed 
+    $(".circlein").hide();
+    $(this).find(".circlein").show(10)
+});
+
+$("#select-menu").click(function(e) {
+    if (e.target.id === $(this).attr("id")) {
+        $(this).fadeOut(40);
+    }
+});
+
+
+menuItemsContainer.addEventListener('scroll', function() {
+    var y = menuItemsContainer.scrollTop;
+    var z = menuItemsContainer.scrollHeight - menuItemsContainer.clientHeight;
+    var q = (y / z) * 70
+    $(".scrollbar").css({
+        top: q + "%"
+    })
+});
+
+scrollbarConatiner.addEventListener("mousemove", function(e) {
+    let scrollbar = this.getElementsByClassName("scrollBar")[0]
+    let y = e.offsetY
+    console.log(menuItemsContainer.scrollHeight, e.offsetY, menuItemsContainer.clientHeight)
+    menuItemsContainer.scrollTop = y;
+})
+</script>
+</body>
+
+</html>
