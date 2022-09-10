@@ -466,7 +466,7 @@ p {
 }
 
 .tabTex a {
-    text-decoration: underline;
+    text-decoration: underline !important;
     color: #000;
 }
 
