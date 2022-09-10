@@ -85,7 +85,7 @@ $(window).height();
 
         $('#owl-carousel02').owlCarousel({
             loop: true,
-            autoplay: true,
+            // autoplay: true,
             margin: 10,
             nav:false,
             animateOut: 'fadeOut',

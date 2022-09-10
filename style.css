@@ -1,3 +1,6 @@
+*,html{
+    scroll-behavior: smooth;
+}
 .container {
     max-width: 1350px !important;
 }
@@ -52,7 +55,9 @@ h1 {
 .slider img {
     border-radius: 12px;
 }
-
+.slider button.owl-dot.active span{
+    background-color: red !important;
+}
 .trial {
     background-color: #fff;
     padding: 5px 12px;
@@ -138,10 +143,7 @@ h1 {
 
 
 /* Reviews Section */
-.navbar2 {
 
-    border-bottom: 2px solid green;
-}
 
 .kkl {
     position: sticky !important;
@@ -167,14 +169,30 @@ h1 {
     position: relative;
 }
 
-.mk a.active::before {
+/* .mk a.active::before {
     position: absolute;
     content: "";
-    height: 5px;
+    height: 2px;
     background: rgb(255, 0, 0);
     width: 100%;
     left: 0;
     bottom: -2px;
+} */
+
+.mk a.active {
+    border-bottom: 3px solid red;
+    padding: 20px 0;
+    border-radius: 2px;
+}
+.mk a.active.bl {
+    border-bottom: 3px solid blue;
+    padding: 20px 0;
+    border-radius: 2px;
+}
+.mk a.active.gr {
+    border-bottom: 3px solid greenyellow;
+    padding: 20px 0;
+    border-radius: 2px;
 }
 
 
@@ -286,7 +304,13 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.seo a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.seo a:hover {
+    text-decoration: underline !important;
+}
 .bg-grad h1 {
     max-width: 960px;
     padding: 60px 0;
@@ -334,7 +358,7 @@ p {
 .bg-grad button {
     margin: 30px 0;
     padding: 10px;
-    font-size: 24px;
+    font-size: 19px;
     transition: .3s;
 }
 
@@ -422,7 +446,9 @@ p {
 .tabTex img {
     width: 100%;
 }
-
+.d-flex.mk.posRe.justify-content-around {
+    padding: 25px 0;
+}
 .tex {
     display: flex;
     flex-direction: column;
@@ -486,6 +512,9 @@ button.owl-dot.active:before {
 
 .owl-dots{
     position: relative;
+}
+.tabCrousel{
+    padding: 70px;
 }
 .tabCrousel .owl-dots button:nth-child(2):before {
     font-family: FontAwesome;
@@ -589,7 +618,7 @@ button.owl-dot.active:before {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .tabCrousel .owl-carousel .owl-stage{
     margin-top: 100px;
@@ -599,6 +628,15 @@ button.owl-dot.active:before {
     display: flex !important;
     flex-direction: column;
     align-items: center;
+}
+
+.tabCrousel h1{
+    max-width: 900px;
+}
+
+.tabCrousel button.owl-dot {
+    
+    margin: 0 50px !important;
 }
 
 
